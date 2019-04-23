@@ -1,27 +1,27 @@
 public class Rectangle extends Shape
 {
     private float width;
-    public Rectangle() {
+    public Rectangle() throws Exception {
         super();
         this.width = getLength();
     }
-    public Rectangle(float length) {
+    public Rectangle(float length) throws Exception {
         this(length, length);
     }
 
-    public Rectangle(float length, float width) {
+    public Rectangle(float length, float width) throws Exception {
         super();
         setLength(length);
         this.width = width;
     }
 
-    public Rectangle(float length, float width, String color) {
+    public Rectangle(float length, float width, String color) throws Exception  {
         setLength(length);
         setColor(color);
         this.width = width;
     }
 
-    public Rectangle(float l, String c) {
+    public Rectangle(float l, String c) throws Exception {
         this(l);
         setColor(c);
     }

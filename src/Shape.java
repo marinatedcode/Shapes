@@ -5,21 +5,28 @@ public class Shape {
     private Color color;
     private float length;
 
-    public Shape() {
+    public Shape() throws Exception {
         this(1.0f, "black");
     }
 
-    public Shape(float l, String c) {
+    public Shape(float length) throws Exception {
+        this(length, "black");
+    }
+
+    public Shape(String color) throws Exception {
+        this(1.0f, color);
+    }
+
+    public Shape(float l, String c) throws Exception {
         setLength(l);
         setColor(c);
-
     }
 
     public Color getColor() {
         return color;
     }
 
-    public void setColor(String c) {
+    public void setColor(String c) throws Exception {
         boolean found = false;
         for (Color col : Color.values()) {
             if (col.name().equalsIgnoreCase(c)) {
@@ -28,7 +35,7 @@ public class Shape {
             }
         }
         if (!found) {
-            System.out.println("Error: " + c + " is not a valid color. Valid options are " + colors() + ".");
+            throw new Exception("Error: " + c + " is not a valid color. Valid options are " + colors() + ".");
         }
     }
 
@@ -36,11 +43,11 @@ public class Shape {
         return length;
     }
 
-    public void setLength(float l) {
+    public void setLength(float l) throws Exception {
         if (l > 0.0) {
             this.length = l;
         } else {
-            System.out.println("Error: Length must be a floating point number greater than 0.0!");
+            throw new Exception("Error: Length must be a floating point number greater than 0.0!");
         }
     }
 

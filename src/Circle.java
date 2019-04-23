@@ -2,11 +2,11 @@ public class Circle extends Shape {
 
     private float circumference;
 
-    public Circle() {
+    public Circle() throws Exception {
         super();
     }
 
-    public Circle(float l, String c) {
+    public Circle(float l, String c) throws Exception {
         setLength(l);
         setColor(c);
         //Sets the circumference
