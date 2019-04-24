@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/**
+ * @author Marinated
+ */
 public class Shape {
 
     private Color color;
