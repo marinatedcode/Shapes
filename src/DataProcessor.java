@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DataProcessor {
-
     public static void main(String[] args) {
         String fileName = "grades.txt";
         int a = 0;
@@ -18,37 +17,21 @@ public class DataProcessor {
         try (Scanner scanner = new Scanner(new File(fileName))) {
             while (scanner.hasNext()) {
                 String line = scanner.nextLine().toUpperCase();
-                switch (line) {
-                    case "A":
-                        a++;
-                        break;
-                    case "B":
-                        b++;
-                        break;
-                    case "C":
-                        c++;
-                        break;
-                    case "D":
-                        d++;
-                        break;
-                    default:
-                        //do nothing
-                        break;
-                }
+                if (line.equalsIgnoreCase("A")) a++;
+                if (line.equalsIgnoreCase("B")) b++;
+                if (line.equalsIgnoreCase("C")) c++;
+                if (line.equalsIgnoreCase("D")) d++;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         ArrayList<String> output = new ArrayList<>();
         output.add("Answer Report");
         output.add("A - " + a);
         output.add("B - " + b);
         output.add("C - " + c);
         output.add("D - " + d);
-
         Charset utf8 = StandardCharsets.UTF_8;
-
         try {
             Files.write(Paths.get("output.txt"), output, utf8);
         } catch (IOException e) {

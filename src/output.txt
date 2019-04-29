@@ -1,5 +1,5 @@
 Answer Report
 A - 28
-B - 16
+B - 17
 C - 29
-D - 27
+D - 26
