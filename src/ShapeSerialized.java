@@ -89,7 +89,7 @@ class ShapeSerializedTest {
                 filename = "file.ser";
                 success = true;
             } catch (Exception e) {
-                System.out.println("Enter a valid color!");
+                System.out.println(e.getMessage());
             }
         }
 
