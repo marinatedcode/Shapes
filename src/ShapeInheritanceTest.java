@@ -15,7 +15,7 @@ public class ShapeInheritanceTest {
                 System.out.println("Enter the circle's radius: ");
                 circle1.setLength(scanner.nextFloat());
                 scanner.nextLine();
-                System.out.println("Enter the circle's color " + Arrays.toString(Shape.Color.values()) + ": ");
+                System.out.println("Enter the circle's color " + Arrays.toString(ShapeSerialized.Color.values()) + ": ");
                 circle1.setColor(scanner.nextLine());
                 System.out.println("Enter the rectangle's length: ");
                 rec1.setLength(scanner.nextFloat());
