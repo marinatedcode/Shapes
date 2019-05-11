@@ -126,8 +126,8 @@ class ShapeSerializedTest {
             file.close();
 
             System.out.println("Shape has been deserialized ");
-            System.out.println("Shape written to file - " + object1.toString());
-            System.out.println("Shape read  from file - " + object1.toString());
+            System.out.println("Shape written to file - " + object.toString());
+            System.out.println("Shape read from file - " + object1.toString());
         } catch (IOException ex) {
             System.out.println("IOException is caught");
         } catch (ClassNotFoundException ex) {
